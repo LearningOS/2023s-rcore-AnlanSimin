@@ -37,6 +37,9 @@ pub fn clear_bss() {
 }
 
 /// the rust entry-point of os
+
+//入口函数(由于移除了main函数 需要告知编译器我们的入口函数)
+//防止修正函数名称
 #[no_mangle]
 pub fn rust_main() -> ! {
     extern "C" {
